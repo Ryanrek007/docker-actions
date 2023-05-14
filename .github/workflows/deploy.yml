@@ -46,6 +46,12 @@ jobs:
       - name: Output information
         run: |
           echo "MONGODB_USERNAME: $MONGODB_USERNAME"
+      - name: show docker active
+        run : |
+          docker ps -a
+          docker images
+          ip a
+      
   deploy:
     needs: test
     runs-on: ubuntu-latest
